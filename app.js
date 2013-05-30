@@ -4,17 +4,12 @@ var express = require('express');
 var app = express();
 
 app.configure(function(){
-  // disable layout
-  app.set("view options", {layout: false});
+  app.set('view engine', 'hbs'); 
+  app.set("view options", { layout: false }) 
+  app.set('views', __dirname + '/');
+  app.engine('html', require('hbs').__express);   
 
-  // make a custom html template
-  app.register('.html', {
-    compile: function(str, options){
-      return function(locals){
-        return str;
-      };
-    }
-  });
+  
 });
 
 app.get('/', function(req, res){
