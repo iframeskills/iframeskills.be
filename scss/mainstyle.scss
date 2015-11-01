@@ -10,31 +10,26 @@
 //   @extend .clearfix
 
 .clearfix:before,
-.clearfix:after
-  content: '.'
-  display: block
-  overflow: hidden
-  visibility: hidden
-  font-size: 0
-  line-height: 0
-  width: 0
-  height: 0
+.clearfix:after{
+  content: '.';
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  font-size: 0;
+  line-height: 0;
+  width: 0;
+  height: 0;
+}
 
-.clearfix:after
-  clear: both
+.clearfix:after{
+  clear: both;
+}
 
-.clearfix
-  zoom: 1
-  
-  
-  
-*
-*
-*  Golden Grid System (1.01)	<http://goldengridsystem.com/>
-*  by Joni Korpi 				<http://jonikorpi.com/>
-*  licensed under MIT			<http://opensource.org/licenses/mit-license.php>
-*	
-*/
+.clearfix{
+  zoom: 1;
+}
+
+
 /*
 *
 *  Margin, padding, and border resets
@@ -89,12 +84,12 @@ html {
   -ms-text-size-adjust: 100%;
 }
 body {
-	
+
   font-size: 100%;
-  background:url("bg.jpg") repeat scroll #FFFFFF;
+  background:url("../img/bg.jpg") repeat scroll #FFFFFF;
   color:#333333;
-  
-  
+
+
 }
 article,
 aside,
@@ -148,13 +143,8 @@ html input[type="button"],
 input[type="reset"],
 input[type="submit"] {
   cursor: pointer;
-  -webkit-appearance: button;
 }
 input[type="checkbox"], input[type="radio"] {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -o-box-sizing: border-box;
-  -ms-box-sizing: border-box;
   box-sizing: border-box;
 }
 textarea {
@@ -180,6 +170,7 @@ figure video {
   display: block;
 }
 img {
+  max-width: 100%;
   border: 0;
   -ms-interpolation-mode: bicubic;
 }
@@ -191,9 +182,11 @@ img {
 */
 body {
   /* 16px / 24px */
-  font-family: museo-sans,sans-serif;
+  font-family: 'Gotham Narrow 4r','Gotham Narrow A','Gotham Narrow B',Helvetica,"Segoe WP","Segoe UI",Arial,sans-serif;
+  font-weight: 400;
   font-size: 1em;
   line-height: 1.5em;
+  margin: 8px;
 }
 .small {
   /* 13px / 18px */
@@ -260,9 +253,7 @@ h3 {
 */
 .wrapper {
   padding: 0 0.75em;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -o-box-sizing: border-box;
+
   box-sizing: border-box;
 }
 /*
@@ -287,12 +278,12 @@ h3 {
 @media screen and (min-width: 40em) {
   body {
     /* Zoom baseline grid to 17/16 = 1.0625 */
-  
+
     font-size: 1.0625em;
   }
   h1 {
     /* 42px / 48px */
-  
+
     font-size: 2.625em;
     line-height: 1.1428571428571428em;
     margin: 1.1428571428571428em 0 0.5714285714285714em;
@@ -304,14 +295,14 @@ h3 {
 *  ----------------------------------------------------------------------
 *  Margin   | #  1     2     3     4     5     6     7     8   |   Margin
 *  5.55555% | %  12.5  25.0  37.5  50.0  62.5  75.0  87.5  100 | 5.55555%
-*	
+*
 *
 */
 /* @media screen and (min-width: 720px) */
 @media screen and (min-width: 45em) {
   body {
     /* Reset baseline grid to 16/16 = 1 */
-  
+
     font-size: 1em;
   }
   #twoway .wrapper {
@@ -323,7 +314,7 @@ h3 {
 @media screen and (min-width: 55.5em) {
   body {
     /* Zoom baseline grid to 17/16 = 1.0625 */
-  
+
     font-size: 1.0625em;
   }
 }
@@ -331,7 +322,7 @@ h3 {
 @media screen and (min-width: 61.5em) {
   body {
     /* Reset baseline grid to 16/16 = 1.0 */
-  
+
     font-size: 1em;
   }
   header, #twoway {
@@ -342,7 +333,7 @@ h3 {
 @media screen and (min-width: 75em) {
   body {
     /* Zoom baseline grid to 17/16 = 1.0625 */
-  
+
     font-size: 1.0625em;
   }
 }
@@ -350,7 +341,7 @@ h3 {
 @media screen and (min-width: 87em) {
   body {
     /* Reset baseline grid to 16/16 = 1.0 */
-  
+
     font-size: 1em;
   }
   header, #twoway {
@@ -361,7 +352,7 @@ h3 {
 @media screen and (min-width: 105em) {
   body {
     /* Zoom baseline grid to 17/16 = 1.0625 */
-  
+
     font-size: 1.0625em;
   }
 }
@@ -371,7 +362,7 @@ h3 {
 *  ----------------------------------------------------------------------------------------------------------------------
 *  Margin   | #  1     2     3     4     5     6     7     8     9     10    11    12    13    14    15    16  |   Margin
 *  5.55555% | %  6.25  12.5  18.75 25.0  31.25 37.5  43.75 50.0  56.25 62.5  68.75 75.0  81.25 87.5  93.75 100 | 5.55555%
-*	
+*
 *
 */
 /* @media screen and (min-width: 1872px) */
@@ -393,7 +384,7 @@ h3 {
 @media screen and (min-width: 130em) {
   body {
     /* Zoom baseline grid to 18/16 = 1.125 */
-  
+
     font-size: 1.125em;
     max-width: 160em;
   }
@@ -408,11 +399,9 @@ header h1{
 	margin:0.5em 0 1em 0;
   font-size: 2.2em;
 	color:#FFF;
-	
-	-moz-text-shadow: 2px 1px #333;
-	-webkit-text-shadow:2px 1px #333;
+
 	text-shadow: 2px 1px #333;
-	
+
 }
 
 

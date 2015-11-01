@@ -1,0 +1,29 @@
+{
+  "globals"   : {
+      /* General */
+    "window"   : false,
+    "document"   : false,
+      /* jQuery */
+    "jQuery"   : false,
+    /* Drupal */
+    "Drupal"   : false,
+    /* RequireJS */
+    "requirejs"   : false,
+    "define"   : false,
+    /* MOCHA */
+    "describe"   : false,
+    "it"         : false,
+    "before"     : false,
+    "beforeEach" : false,
+    "after"      : false,
+    "afterEach"  : false,
+    "Properties" : false
+  },
+  "indent": 2,
+  "white": true,
+  "node": true,
+  "undef": true,
+  "-W058": true,
+  "-W014": true,
+  "expr": true
+}
