@@ -14,7 +14,10 @@
 <body lang="nl">
     <header>
         <div class="wrapper">
-            <img src="img/iframeskills.png" alt="iframeskills">
+            <picture>
+                <source srcset="img/iframeskills.png" media="(min-width: 640px)">
+                <img srcset="img/iframeskills_small.png" alt="Image Description">
+            </picture>
             <h1>&quot;I don't mean to brag, <br />
                 but I am quite good <br />
                 at coding the internets.&quot;</h1>
@@ -39,6 +42,7 @@
     <!--[if lt IE 9]>
 		<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
+    <script src="/js/libs/picturefill.min.js"></script>
     <script type="text/javascript">
     var _gaq = _gaq || [];
     _gaq.push(['_setAccount', 'UA-22108376-1']);
