@@ -1,13 +1,16 @@
 @charset "utf-8";
-/* CSS Document */
 
-// `Clearfix
-//--------------------------------------------------
-
-// Can be added to other style rules via:
-//
-// #foobar
-//   @extend .clearfix
+@font-face {
+    font-family: 'visitor';
+    src: url('../fonts/visitor1-webfont.eot');
+    src: url('../fonts/visitor1-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/visitor1-webfont.woff2') format('woff2'),
+         url('../fonts/visitor1-webfont.woff') format('woff'),
+         url('../fonts/visitor1-webfont.ttf') format('truetype'),
+         url('../fonts/visitor1-webfont.svg#visitor_tt1_brkregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
 
 .clearfix:before,
 .clearfix:after{
@@ -84,13 +87,11 @@ html {
   -ms-text-size-adjust: 100%;
 }
 body {
-
   font-size: 100%;
-  background:url("../img/bg.jpg") repeat scroll #FFFFFF;
+  background:#AFAFAF url("../img/bg.jpg") repeat scroll;
   color:#333333;
-
-
 }
+
 article,
 aside,
 details,
@@ -106,12 +107,14 @@ canvas,
 video {
   display: block;
 }
+
 sub, sup {
   font-size: 75%;
   line-height: 0;
   position: relative;
   vertical-align: baseline;
 }
+
 sup {
   top: -0.5em;
 }
@@ -182,8 +185,6 @@ img {
 */
 body {
   /* 16px / 24px */
-  font-family: 'Gotham Narrow 4r','Gotham Narrow A','Gotham Narrow B',Helvetica,"Segoe WP","Segoe UI",Arial,sans-serif;
-  font-weight: 400;
   font-size: 1em;
   line-height: 1.5em;
   margin: 8px;
@@ -207,7 +208,9 @@ body {
 
   font-size: 1.625em;
   line-height: 1.3846153846153846em;
-  font-family: league-gothic,sans-serif;
+
+  font-family: 'visitor', sans-serif;
+  font-weight: 400;
 }
 .huge {
   /* 42px / 48px */
@@ -397,11 +400,9 @@ header{
 
 header h1{
 	margin:0.5em 0 1em 0;
-  font-size: 2.2em;
-	color:#FFF;
-
-	text-shadow: 2px 1px #333;
-
+  font-size: 24px;
+	color:#fff;
+	text-shadow: 1px 1px #000;
 }
 
 
@@ -410,6 +411,32 @@ section .wrapper{
 	margin:0 auto;
 }
 
-.section #contact img{
-	margin: 0 10px 0 0;
+
+.m-social {
+  margin: 0 15px;
+}
+
+.m-social--facebook path{
+  fill: #3A5697;
+}
+
+.m-social--twitter path{
+  fill: #60A5A9;
+}
+
+.m-social--linkedin path{
+  fill: #124F78;
+}
+
+.contact {
+  margin: 0 -10px;
+  padding: 10px 0 0 0;
+  background: #D1D1D1;
+  background: rgba(209, 209, 209, 0.75);
+  border-top: 10px solid #BFBFBF;
+  border-bottom: 10px solid #BFBFBF;
+}
+
+a {
+  text-decoration: none;
 }

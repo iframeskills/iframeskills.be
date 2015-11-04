@@ -1,0 +1,17 @@
+@charset 'UTF-8';
+
+.hidden {
+  display: none !important;
+  visibility: hidden;
+}
+
+.clearfix:before,
+.clearfix:after {
+  content: " "; /* 1 */
+  line-height: 0;
+  display: table; /* 2 */
+}
+
+.clearfix:after {
+  clear: both;
+}
